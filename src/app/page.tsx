@@ -2,20 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-
-const navLinks = [
-  { label: "High Performance Travel", href: "/high-performance-travel" },
-  { label: "Experience Gateway", href: "/experience-gateway" },
-  { label: "Elite Healthspan", href: "/elite-healthspan" },
-  { label: "Private Black Label", href: "/private-black-label" },
-  {
-    label: "Young Achiever’s Scholarship",
-    href: "/young-achievers-scholarship",
-  },
-  { label: "About Us / Team", href: "/about" },
-  { label: "Calling All Elite Experience Creators", href: "/calling-creators" },
-  { label: "Contact us", href: "/contact" },
-];
+import { navLinks } from "@/constants/navLinks";
 
 // Framer Motion variants for staggered slide-up
 const container = {
@@ -46,7 +33,7 @@ export default function Homepage() {
       style={{ backgroundImage: "url('/bg.jpg')" }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 z-0 bg-black/50" />
+      <div className="absolute inset-0 z-0 bg-black/60" />
 
       {/* Top Left Logo */}
       <div className="relative z-10 text-5xl font-extrabold text-white">
@@ -56,7 +43,7 @@ export default function Homepage() {
       {/* Bottom Left Nav Links */}
       <nav className="relative z-10">
         <motion.ul
-          className="space-y-2"
+          className="space-y-1 sm:space-y-2"
           variants={container}
           initial="hidden"
           animate="show"
@@ -65,7 +52,7 @@ export default function Homepage() {
             <motion.li key={link.href} variants={item}>
               <Link
                 href={link.href}
-                className="group font-oswald relative flex items-center pl-10 text-5xl font-extrabold tracking-tight text-white uppercase transition-all duration-200"
+                className="group font-oswald relative flex items-center pl-4 sm:pl-10 text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white uppercase transition-all duration-200"
               >
                 {/* Arrow Icon (hidden until hover) */}
                 <span className="absolute left-0 -translate-x-3 opacity-0 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100">
@@ -75,7 +62,7 @@ export default function Homepage() {
                     viewBox="0 0 24 24"
                     strokeWidth={2.5}
                     stroke="currentColor"
-                    className="h-8 w-8"
+                    className="h-5 w-5 sm:h-8 sm:w-8"
                   >
                     <path
                       strokeLinecap="round"

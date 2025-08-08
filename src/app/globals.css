@@ -5,9 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-primary: #121063;
-  --color-secondary: #e3dfd5;
-  --color-heading: #78dcca;
+  --color-pri: #626041;
+  --color-sec: #e3dfd5;
+  --color-heading: #deae43;
   --font-oswald: 'Oswald', sans-serif;
 }
 
