@@ -1,9 +1,145 @@
-import React from 'react'
+"use client";
+
+import SlideUpRevealText from "@/components/custom/slide-up-reveal-text";
+import ProgramResponsibilities from "@/components/program-responsibilities";
+import { programResponsibilities } from "@/constants/programResponsibilities";
+import Image from "next/image";
+import React from "react";
 
 const HighPerformanceTravel = () => {
   return (
-    <div>HighPerformanceTravel</div>
-  )
-}
+    <section className="text-pri">
+      <h1>
+        <SlideUpRevealText text="High Performance Travel" />
+      </h1>
 
-export default HighPerformanceTravel
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+        <p className="text-xl font-semibold uppercase sm:text-2xl">
+          At CRE8 XP, we deliver{" "}
+          <span className="font-extrabold">
+            transformational, turn-key programs designed to inspire, challenge
+            and elevate{" "}
+          </span>
+          . Whether you’re seeking an exclusive, high-performance group
+          experience or a truly unique adventure, we craft bespoke,
+          life-changing journeys that go beyond expectations.
+        </p>
+
+        {/* Image container */}
+        <div className="relative h-128 w-full sm:h-auto">
+          <Image
+            src="https://images.unsplash.com/photo-1682695795798-1b31ea040caf?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="High Performance Travel"
+            fill
+            className="rounded-sm object-cover"
+          />
+        </div>
+      </div>
+
+      <div className="mx-auto mt-24 sm:max-w-2/3">
+        <h2>Our Promise</h2>
+        <p>
+          Get ready for a journey that goes beyond the destination. With
+          carefully curated resources — like insightful reading materials,
+          reflective exercises, and practical tools — you’ll gain more than just
+          memories. You’ll leave with a fresh perspective and profound growth
+          that continues to shape your life long after you return home. This
+          isn’t just a trip; it’s an experience that stays with you.
+        </p>
+
+        <div className="relative w-full h-120 mt-8">
+          <Image
+            src="https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0"
+            alt="High Performance Travel"
+            fill
+            className="rounded-sm object-cover"
+          />
+        </div>
+
+        <h2>Our Fully Integrated Approach</h2>
+        <ul id="our-fully-integrated-approach" className="space-y-2">
+          <li>
+            <strong>Extraordinary Experiences That Shift Perspectives:</strong>{" "}
+            Unlock new ways of thinking and performing at the highest level.
+          </li>
+          <li>
+            <strong>Seamless Travel &amp; Logistics:</strong> Handled through
+            our exclusive travel partner, including flights, accommodation,
+            transfers, and transport.
+          </li>
+          <li>
+            <strong>World-Class Hospitality &amp; Dining:</strong> Curated meals
+            for participants and leaders, plus exclusive dinners with inspiring
+            presentations.
+          </li>
+          <li>
+            <strong>Access to Global Sporting Icons &amp; Venues:</strong>{" "}
+            Private tours of elite high performance facilities, personally
+            guided by industry leaders.
+          </li>
+          <li>
+            <strong>Elite-Level Workshops &amp; Guest Speakers:</strong>{" "}
+            High-performance sessions designed to push boundaries and accelerate
+            success.
+          </li>
+          <li>
+            <strong>Unmatched Networking Opportunities:</strong> Build powerful
+            connections through exclusive events, intimate discussions, and
+            industry insights.
+          </li>
+          <li>
+            <strong>Immersive Sporting Experiences:</strong> Engage in unique,
+            hands-on activities that redefine what’s possible.
+          </li>
+          <li>
+            <strong>Professional Growth &amp; Recognition:</strong> Gain
+            micro-credentialing, badges, and access to our cutting-edge Learning
+            Management System.
+          </li>
+          <li>
+            <strong>Comprehensive Preparation &amp; Support:</strong> Including
+            leader briefings, participant inductions, and tailored networking
+            opportunities.
+          </li>
+        </ul>
+
+        <h2>Program Modules</h2>
+        <p>
+          Our program is designed to bridge the gap between elite sports and
+          corporate performance, delivering an immersive, hands-on experience
+          that mirrors the principles of professional athletes in the corporate
+          world. Through world-class facilities, expert-led sessions, and
+          exclusive access to high-performance environments, we provide a
+          transformational journey that reshapes leadership, teamwork, and
+          personal growth.
+        </p>
+
+        <section className="py-12">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {programResponsibilities.map((item) => (
+              <ProgramResponsibilities
+                key={item.number}
+                number={item.number}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
+          </div>
+        </section>
+
+        <h2>Tailored: We Discuss and Create</h2>
+        <p>
+          Cre8XP crafts bespoke high performance travel experiences with
+          professionalism, ensuring the highest standards of safety and quality
+          through selective guest curation, expert practitioners, and
+          personalized planning. With world-class facilities, expert-led
+          sessions, and exclusive access to elite environments, we deliver a
+          transformative journey that redefines leadership, teamwork, and
+          personal growth.
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default HighPerformanceTravel;

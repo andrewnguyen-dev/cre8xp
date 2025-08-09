@@ -71,16 +71,16 @@ export default function SubpageLayout({
   }, [menuOpen]);
 
   const btnBase =
-    "h-11 w-11 rounded-full bg-pri text-white transition-colors duration-200 hover:bg-sec hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/40 active:scale-[0.98]";
+    "h-11 w-11 rounded-full bg-pri text-white transition-colors duration-200 hover:text-pri hover:bg-sec hover:border hover:border-pri hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/40 active:scale-[0.98]";
 
   // Big radius so the circle covers any viewport size. 150vmax is usually enough.
   const circleOpen = `circle(150vmax at ${center.x}px ${center.y}px)`;
   const circleClosed = `circle(0px at ${center.x}px ${center.y}px)`;
 
   return (
-    <div className="relative min-h-dvh">
+    <div className="bg-sec relative min-h-dvh px-6 py-24 sm:px-24">
       {/* Top-left controls */}
-      <div className="fixed top-4 left-4 z-50 flex gap-3">
+      <div className="fixed top-0 left-0 p-6 z-50 flex w-full justify-between">
         <button
           type="button"
           aria-label="Back to homepage"
@@ -90,7 +90,7 @@ export default function SubpageLayout({
         >
           <svg
             viewBox="0 0 24 24"
-            className="mx-auto h-6 w-6 hover:text-pri"
+            className="mx-auto h-6 w-6"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
@@ -115,7 +115,7 @@ export default function SubpageLayout({
         >
           <svg
             viewBox="0 0 24 24"
-            className="mx-auto h-6 w-6 hover:text-pri"
+            className="mx-auto h-6 w-6"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
@@ -167,7 +167,7 @@ export default function SubpageLayout({
             >
               <svg
                 viewBox="0 0 24 24"
-                className="mx-auto h-6 w-6 hover:text-pri"
+                className="mx-auto h-6 w-6"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -178,13 +178,13 @@ export default function SubpageLayout({
           </div> */}
 
           <nav className="grid flex-1 place-items-center px-6">
-            <ul className="w-full max-w-3xl space-y-3 sm:space-y-6 text-center">
+            <ul className="w-full max-w-3xl space-y-3 text-center sm:space-y-6">
               {navLinks.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
                     onClick={closeMenu}
-                    className="rounded-2xl py-4 text-lg sm:text-2xl font-semibold transition-colors duration-200 md:text-4xl"
+                    className="rounded-2xl py-4 text-lg font-semibold transition-colors duration-200 sm:text-2xl md:text-4xl"
                   >
                     {item.label}
                   </Link>
