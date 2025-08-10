@@ -41,7 +41,7 @@ export default function Homepage() {
       </div>
 
       {/* Bottom Left Nav Links */}
-      <nav className="relative z-10">
+      <nav className="relative z-10 mb-10 sm:mb-6">
         <motion.ul
           className="space-y-1 sm:space-y-2"
           variants={container}

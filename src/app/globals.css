@@ -136,3 +136,7 @@ h1 {
 h2 {
   @apply text-pri font-clash mt-12 mb-4 text-xl font-bold uppercase sm:text-3xl;
 }
+
+b {
+  @apply text-xl font-semibold uppercase sm:text-2xl;
+}

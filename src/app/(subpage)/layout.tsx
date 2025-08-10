@@ -4,12 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { navLinks } from "@/constants/navLinks";
+import Footer from "@/components/footer";
 
-export default function SubpageLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function SubpageLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [animDone, setAnimDone] = useState(false);
@@ -80,7 +77,7 @@ export default function SubpageLayout({
   return (
     <div className="bg-sec relative min-h-dvh px-6 py-24 sm:px-24">
       {/* Top-left controls */}
-      <div className="fixed top-0 left-0 p-6 z-50 flex w-full justify-between">
+      <div className="fixed top-0 left-0 z-50 flex w-full justify-between p-6">
         <button
           type="button"
           aria-label="Back to homepage"
@@ -88,18 +85,8 @@ export default function SubpageLayout({
           onClick={() => router.push("/")}
           title="Back"
         >
-          <svg
-            viewBox="0 0 24 24"
-            className="mx-auto h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path
-              d="M15 18l-6-6 6-6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+          <svg viewBox="0 0 24 24" className="mx-auto h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
 
@@ -113,13 +100,7 @@ export default function SubpageLayout({
           onClick={openMenu}
           title="Menu"
         >
-          <svg
-            viewBox="0 0 24 24"
-            className="mx-auto h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
+          <svg viewBox="0 0 24 24" className="mx-auto h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" />
           </svg>
         </button>
@@ -193,11 +174,10 @@ export default function SubpageLayout({
             </ul>
           </nav>
 
-          <div className="p-4 text-center text-sm opacity-80">
-            Press Esc to close
-          </div>
+          <div className="p-4 text-center text-sm opacity-80">Press Esc to close</div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
