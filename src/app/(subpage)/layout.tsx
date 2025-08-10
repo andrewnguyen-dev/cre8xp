@@ -11,7 +11,7 @@ export default function SubpageLayout({ children }: { children: React.ReactNode 
   const [menuOpen, setMenuOpen] = useState(false);
   const [animDone, setAnimDone] = useState(false);
   const [center, setCenter] = useState<{ x: number; y: number }>({
-    x: 0,
+    x: 1920,
     y: 0,
   });
   const menuBtnRef = useRef<HTMLButtonElement | null>(null);
