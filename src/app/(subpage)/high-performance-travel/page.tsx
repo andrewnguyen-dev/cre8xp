@@ -1,36 +1,42 @@
 "use client";
 
-import SlideUpRevealText from "@/components/custom/slide-up-reveal-text";
+import SlideUpRevealText from "@/components/custom-animation/slide-up-reveal-text";
 import ProgramResponsibilities from "@/components/program-responsibilities";
 import { programResponsibilities } from "@/constants/programResponsibilities";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const HighPerformanceTravel = () => {
   return (
     <section className="text-pri font-supreme">
-      <h1>
-        <SlideUpRevealText text="High Performance Travel" />
-      </h1>
-
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-        <b>
-          At CRE8 XP, we deliver{" "}
-          <span className="font-extrabold">
-            transformational, turn-key programs designed to inspire, challenge and elevate{" "}
-          </span>
-          . Whether you’re seeking an exclusive, high-performance group experience or a truly unique adventure, we craft
-          bespoke, life-changing journeys that go beyond expectations.
-        </b>
-
+      <div className="grid h-screen grid-cols-1 gap-8 sm:grid-cols-2">
+        <div className="my-auto px-24">
+          <h2>
+            <SlideUpRevealText text="High Performance Travel" />
+          </h2>
+          <b>
+            At CRE8 XP, we deliver{" "}
+            <span className="font-extrabold">
+              transformational, turn-key programs designed to inspire, challenge and elevate{" "}
+            </span>
+            . Whether you’re seeking an exclusive, high-performance group experience or a truly unique adventure, we
+            craft bespoke, life-changing journeys that go beyond expectations.
+          </b>
+        </div>
         {/* Image container */}
-        <div className="relative h-128 w-full sm:h-auto">
-          <Image
-            src="https://images.unsplash.com/photo-1682695795798-1b31ea040caf?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="High Performance Travel"
-            fill
-            className="rounded-sm object-cover"
-          />
+        <div className="relative w-full overflow-hidden sm:h-auto">
+          <motion.div
+            initial={{ clipPath: "inset(0 0 0 100%)", scale: 1.05 }}
+            animate={{ clipPath: "inset(0 0 0 0)", scale: 1 }}
+            transition={{
+              duration: 1.5,
+              ease: [0.5, 0, 0.5, 1] ,
+            }}
+            className="relative h-full w-full"
+          >
+            <Image src="/1.jpg" alt="High Performance Travel" fill className="object-cover" />
+          </motion.div>
         </div>
       </div>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import SlideUpRevealText from "@/components/custom/slide-up-reveal-text";
+import SlideUpRevealText from "@/components/custom-animation/slide-up-reveal-text";
 import Itineraries from "@/components/itineraries";
 import { itineraries } from "@/constants/itineraries";
 import React from "react";
