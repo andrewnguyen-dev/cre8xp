@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { navLinks } from "@/constants/navLinks";
+import Image from "next/image";
 
 // Framer Motion variants for staggered slide-up
 const container = {
@@ -36,18 +37,13 @@ export default function Homepage() {
       {/* <div className="absolute inset-0 z-0 bg-black/10" /> */}
 
       {/* Top Left Logo */}
-      <div className="relative z-10 text-5xl font-extrabold text-white">
-        Cre8xp
+      <div className="relative z-10">
+        <Image src="/logo-white.png" alt="Cre8xp Logo" width={150} height={50} />
       </div>
 
       {/* Bottom Left Nav Links */}
       <nav className="relative z-10 mb-10 sm:mb-6">
-        <motion.ul
-          className="space-y-1 sm:space-y-2"
-          variants={container}
-          initial="hidden"
-          animate="show"
-        >
+        <motion.ul className="space-y-1 sm:space-y-2" variants={container} initial="hidden" animate="show">
           {navLinks.map((link) => (
             <motion.li key={link.href} variants={item}>
               <Link
@@ -64,11 +60,7 @@ export default function Homepage() {
                     stroke="currentColor"
                     className="h-5 w-5 sm:h-8 sm:w-8"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M13.5 4.5l7 7-7 7m-10-7h17"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5l7 7-7 7m-10-7h17" />
                   </svg>
                 </span>
 
