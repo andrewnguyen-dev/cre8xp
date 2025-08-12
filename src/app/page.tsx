@@ -33,7 +33,7 @@ export default function Homepage() {
       style={{ backgroundImage: "url('/bg.jpg')" }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 z-0 bg-black/60" />
+      {/* <div className="absolute inset-0 z-0 bg-black/10" /> */}
 
       {/* Top Left Logo */}
       <div className="relative z-10 text-5xl font-extrabold text-white">

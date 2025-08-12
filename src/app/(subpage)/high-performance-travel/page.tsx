@@ -112,14 +112,6 @@ const HighPerformanceTravel = () => {
             ))}
           </div>
         </section>
-
-        <h2>Tailored: We Discuss and Create</h2>
-        <p>
-          Cre8XP crafts bespoke high performance travel experiences with professionalism, ensuring the highest standards
-          of safety and quality through selective guest curation, expert practitioners, and personalized planning. With
-          world-class facilities, expert-led sessions, and exclusive access to elite environments, we deliver a
-          transformative journey that redefines leadership, teamwork, and personal growth.
-        </p>
       </div>
     </section>
   );

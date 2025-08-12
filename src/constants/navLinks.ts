@@ -8,6 +8,6 @@ export const navLinks = [
     href: "/young-achievers-scholarship",
   },
   { label: "About Us / Team", href: "/about" },
-  { label: "Calling All Elite Experience Creators", href: "/calling-creators" },
+  { label: "Calling All Creators", href: "/calling-creators" },
   { label: "Contact us", href: "/contact" },
 ];
