@@ -1,23 +1,25 @@
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 
-interface SlideUpRevealTextProps {
+interface FadeInTextProps {
   children: ReactNode;
   delay?: number;
+  duration?: number;
   className?: string;
 }
 
-const SlideUpRevealText: React.FC<SlideUpRevealTextProps> = ({
+const FadeInText: React.FC<FadeInTextProps> = ({
   children,
   delay = 0,
+  duration = 0.8,
   className = '',
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 1, y: 20, clipPath: 'inset(0 0 120% 0)' }}
-      animate={{ opacity: 1, y: 0, clipPath: 'inset(0 0 0% 0)' }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{
-        duration: 1,
+        duration,
         ease: 'easeOut',
         delay,
       }}
@@ -28,4 +30,4 @@ const SlideUpRevealText: React.FC<SlideUpRevealTextProps> = ({
   );
 };
 
-export default SlideUpRevealText;
+export default FadeInText;

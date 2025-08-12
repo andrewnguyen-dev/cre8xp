@@ -6,23 +6,27 @@ import { programResponsibilities } from "@/constants/programResponsibilities";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import FadeInText from "@/components/custom-animation/fade-in-text";
 
 const HighPerformanceTravel = () => {
   return (
     <section className="text-pri font-supreme">
       <div className="grid h-screen grid-cols-1 gap-8 sm:grid-cols-2">
-        <div className="my-auto px-24">
-          <h2>
-            <SlideUpRevealText text="High Performance Travel" />
-          </h2>
-          <b>
-            At CRE8 XP, we deliver{" "}
-            <span className="font-extrabold">
-              transformational, turn-key programs designed to inspire, challenge and elevate{" "}
-            </span>
-            . Whether you’re seeking an exclusive, high-performance group experience or a truly unique adventure, we
-            craft bespoke, life-changing journeys that go beyond expectations.
-          </b>
+        <div className="my-auto px-10 sm:px-24">
+          <SlideUpRevealText>
+            <h2>High Performance Travel</h2>
+          </SlideUpRevealText>
+
+          <FadeInText delay={0.75}>
+            <b>
+              At CRE8 XP, we deliver{" "}
+              <span className="font-extrabold">
+                transformational, turn-key programs designed to inspire, challenge and elevate{" "}
+              </span>
+              . Whether you’re seeking an exclusive, high-performance group experience or a truly unique adventure, we
+              craft bespoke, life-changing journeys that go beyond expectations.
+            </b>
+          </FadeInText>
         </div>
         {/* Image container */}
         <div className="relative w-full overflow-hidden sm:h-auto">
@@ -31,7 +35,7 @@ const HighPerformanceTravel = () => {
             animate={{ clipPath: "inset(0 0 0 0)", scale: 1 }}
             transition={{
               duration: 1.5,
-              ease: [0.5, 0, 0.5, 1] ,
+              ease: [0.5, 0, 0.5, 1],
             }}
             className="relative h-full w-full"
           >
