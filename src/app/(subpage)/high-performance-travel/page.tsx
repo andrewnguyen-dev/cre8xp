@@ -18,14 +18,14 @@ const HighPerformanceTravel = () => {
           </SlideUpRevealText>
 
           <FadeInText delay={0.75}>
-            <b>
+            <p className="text-lg">
               At CRE8 XP, we deliver{" "}
               <span className="font-extrabold">
                 transformational, turn-key programs designed to inspire, challenge and elevate{" "}
               </span>
               . Whether you’re seeking an exclusive, high-performance group experience or a truly unique adventure, we
               craft bespoke, life-changing journeys that go beyond expectations.
-            </b>
+            </p>
           </FadeInText>
         </div>
         {/* Image container */}
