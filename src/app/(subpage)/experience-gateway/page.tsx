@@ -7,7 +7,7 @@ import React from "react";
 
 const ExperienceGateway = () => {
   return (
-    <section className="text-pri">
+    <section className="text-pri font-supreme">
       <h1>
         <SlideUpRevealText text="The World’s Ultimate Experience Marketplace for High-Performance Adventures" />
       </h1>

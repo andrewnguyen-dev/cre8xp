@@ -8,7 +8,7 @@ import React from "react";
 
 const HighPerformanceTravel = () => {
   return (
-    <section className="text-pri">
+    <section className="text-pri font-supreme">
       <h1>
         <SlideUpRevealText text="High Performance Travel" />
       </h1>

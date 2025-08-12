@@ -118,18 +118,40 @@ const supreme = localFont({
       weight: "800",
       style: "italic",
     },
+  ],
+  variable: "--font-supreme",
+  display: "swap",
+});
+
+const melodrama = localFont({
+  src: [
     {
-      path: "../../public/fonts/Supreme-Variable.woff2",
-      weight: "100 900",
+      path: "../../public/fonts/Melodrama-Light.woff2",
+      weight: "300",
       style: "normal",
     },
     {
-      path: "../../public/fonts/Supreme-VariableItalic.woff2",
-      weight: "100 900",
+      path: "../../public/fonts/Melodrama-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Melodrama-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Melodrama-Semibold.woff2",
+      weight: "600",
       style: "italic",
     },
+    {
+      path: "../../public/fonts/Melodrama-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
   ],
-  variable: "--font-supreme",
+  variable: "--font-melodrama",
   display: "swap",
 });
 
@@ -145,7 +167,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${clash.className} ${supreme.className}  antialiased`}>{children}</body>
+      <body className={`${clash.className} ${melodrama.className} ${supreme.className} antialiased`}>{children}</body>
     </html>
   );
 }
