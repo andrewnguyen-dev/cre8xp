@@ -26,8 +26,8 @@ const HighPerformanceTravel = () => {
               <span className="font-extrabold">
                 transformational, turn-key programs designed to inspire, challenge and elevate
               </span>
-              . Whether you’re seeking an exclusive, high-performance group experience or a truly unique adventure, we
-              craft bespoke, life-changing journeys that go beyond expectations.
+              . Whether you&apos;re seeking an exclusive, high-performance group experience or a truly unique adventure,
+              we craft bespoke, life-changing journeys that go beyond expectations.
             </p>
           </FadeInText>
         </div>
@@ -68,16 +68,17 @@ const HighPerformanceTravel = () => {
           </motion.div>
         </div>
         <div className="my-auto px-10 sm:px-16">
-          <FadeInText>
-          <h2>Our Promise</h2>
-
+          <FadeInText fromY={10}>
+            <h2>Our Promise</h2>
           </FadeInText>
-          <p>
-            Get ready for a journey that goes beyond the destination. With carefully curated resources — like insightful
-            reading materials, reflective exercises, and practical tools — you'll gain more than just memories. You'll
-            leave with a fresh perspective and profound growth that continues to shape your life long after you return
-            home. This isn't just a trip; it's an experience that stays with you.
-          </p>
+          <FadeInText fromY={10} delay={0.25}>
+            <p>
+              Get ready for a journey that goes beyond the destination. With carefully curated resources — like
+              insightful reading materials, reflective exercises, and practical tools — you&apos;ll gain more than just
+              memories. You&apos;ll leave with a fresh perspective and profound growth that continues to shape your life
+              long after you return home. This isn&apos;t just a trip; it&apos;s an experience that stays with you.
+            </p>
+          </FadeInText>
         </div>
       </div>
       <div>
@@ -108,8 +109,8 @@ const HighPerformanceTravel = () => {
             intimate discussions, and industry insights.
           </li>
           <li>
-            <strong>Immersive Sporting Experiences:</strong> Engage in unique, hands-on activities that redefine what’s
-            possible.
+            <strong>Immersive Sporting Experiences:</strong> Engage in unique, hands-on activities that redefine
+            what&apos;s possible.
           </li>
           <li>
             <strong>Professional Growth &amp; Recognition:</strong> Gain micro-credentialing, badges, and access to our
