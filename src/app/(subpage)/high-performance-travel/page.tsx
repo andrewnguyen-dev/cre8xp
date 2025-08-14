@@ -4,14 +4,17 @@ import SlideUpRevealText from "@/components/custom-animation/slide-up-reveal-tex
 import ProgramResponsibilities from "@/components/program-responsibilities";
 import { programResponsibilities } from "@/constants/programResponsibilities";
 import Image from "next/image";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import FadeInText from "@/components/custom-animation/fade-in-text";
 
 const HighPerformanceTravel = () => {
+  const img1Ref = useRef<HTMLDivElement>(null);
+  const isImg1InView = useInView(img1Ref, { once: true, amount: 0.01 });
+
   return (
     <section className="text-pri font-supreme">
-      <div className="grid h-screen grid-cols-1 gap-8 sm:grid-cols-2">
+      <div className="grid h-screen grid-cols-1 sm:grid-cols-2">
         <div className="my-auto px-10 sm:px-24">
           <SlideUpRevealText>
             <h2>High Performance Travel</h2>
@@ -21,7 +24,7 @@ const HighPerformanceTravel = () => {
             <p className="text-lg">
               At CRE8 XP, we deliver{" "}
               <span className="font-extrabold">
-                transformational, turn-key programs designed to inspire, challenge and elevate{" "}
+                transformational, turn-key programs designed to inspire, challenge and elevate
               </span>
               . Whether you’re seeking an exclusive, high-performance group experience or a truly unique adventure, we
               craft bespoke, life-changing journeys that go beyond expectations.
@@ -29,7 +32,7 @@ const HighPerformanceTravel = () => {
           </FadeInText>
         </div>
         {/* Image container */}
-        <div className="relative w-full overflow-hidden sm:h-auto">
+        <div className="relative h-auto w-full overflow-hidden">
           <motion.div
             initial={{ clipPath: "inset(0 0 0 100%)", scale: 1.05 }}
             animate={{ clipPath: "inset(0 0 0 0)", scale: 1 }}
@@ -44,24 +47,40 @@ const HighPerformanceTravel = () => {
         </div>
       </div>
 
-      <div className="mx-auto mt-24 sm:max-w-2/3">
-        <h2>Our Promise</h2>
-        <p>
-          Get ready for a journey that goes beyond the destination. With carefully curated resources — like insightful
-          reading materials, reflective exercises, and practical tools — you’ll gain more than just memories. You’ll
-          leave with a fresh perspective and profound growth that continues to shape your life long after you return
-          home. This isn’t just a trip; it’s an experience that stays with you.
-        </p>
-
-        <div className="relative mt-8 h-120 w-full">
-          <Image
-            src="https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0"
-            alt="High Performance Travel"
-            fill
-            className="rounded-sm object-cover"
-          />
+      <div ref={img1Ref} className="grid h-screen grid-cols-1 gap-8 bg-white sm:grid-cols-3">
+        <div className="relative col-span-2 h-auto w-full overflow-hidden">
+          <motion.div
+            initial={{ clipPath: "inset(0 100% 0 0)", scale: 1.1 }}
+            animate={isImg1InView ? { clipPath: "inset(0 0 0 0)", scale: 1 } : undefined}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{
+              duration: 1.5,
+              ease: [0.5, 0, 0.5, 1],
+            }}
+            className="relative h-full w-full"
+          >
+            <Image
+              src="https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0"
+              alt="High Performance Travel"
+              fill
+              className="object-cover"
+            />
+          </motion.div>
         </div>
+        <div className="my-auto px-10 sm:px-16">
+          <FadeInText>
+          <h2>Our Promise</h2>
 
+          </FadeInText>
+          <p>
+            Get ready for a journey that goes beyond the destination. With carefully curated resources — like insightful
+            reading materials, reflective exercises, and practical tools — you'll gain more than just memories. You'll
+            leave with a fresh perspective and profound growth that continues to shape your life long after you return
+            home. This isn't just a trip; it's an experience that stays with you.
+          </p>
+        </div>
+      </div>
+      <div>
         <h2>Our Fully Integrated Approach</h2>
         <ul id="our-fully-integrated-approach" className="space-y-2">
           <li>
