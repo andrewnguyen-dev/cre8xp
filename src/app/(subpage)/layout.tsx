@@ -75,7 +75,7 @@ export default function SubpageLayout({ children }: { children: React.ReactNode 
   const circleClosed = `circle(0px at ${center.x}px ${center.y}px)`;
 
   return (
-    <div className="bg-sec font-clash relative min-h-dvh">
+    <div className="font-clash relative min-h-dvh">
       {/* Top-left controls */}
       <div className="fixed top-0 left-0 z-50 flex w-full justify-between p-6">
         <button
