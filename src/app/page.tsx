@@ -48,7 +48,7 @@ export default function Homepage() {
             <motion.li key={link.href} variants={item}>
               <Link
                 href={link.href}
-                className="group font-clash relative flex items-center pl-4 text-2xl font-semibold text-white uppercase transition-all duration-200 sm:pl-10 sm:text-4xl md:text-5xl"
+                className="group font-manrope relative flex items-center pl-4 text-2xl font-bold text-white uppercase transition-all duration-200 sm:pl-10 sm:text-4xl md:text-5xl"
               >
                 {/* Arrow Icon (hidden until hover) */}
                 <span className="absolute left-0 -translate-x-3 opacity-0 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100">

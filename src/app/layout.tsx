@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google";
+import { Manrope } from "next/font/google";
 import localFont from "next/font/local";
 
 import "./globals.css";
 
-const notoSans = Noto_Sans({
-  variable: "--font-noto-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
@@ -167,7 +167,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${clash.className} ${melodrama.className} ${supreme.className} antialiased`}>{children}</body>
+      <body className={`${clash.className} ${manrope.className} ${melodrama.className} ${supreme.className} antialiased`}>{children}</body>
     </html>
   );
 }

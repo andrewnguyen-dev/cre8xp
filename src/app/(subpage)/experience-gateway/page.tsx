@@ -1,6 +1,6 @@
 "use client";
 
-import SlideUpRevealText from "@/components/custom-animation/slide-up-reveal-text";
+import FadeInText from "@/components/custom-animation/fade-in-text";
 import Itineraries from "@/components/itineraries";
 import SplitText from "@/components/reactbits/split-text";
 import { itineraries } from "@/constants/itineraries";
@@ -8,39 +8,43 @@ import React from "react";
 
 const ExperienceGateway = () => {
   return (
-    <section className="text-pri font-supreme">
+    <section className="text-pri font-manrope">
       <div className="bg-sec">
-        <div className="h-screen px-6 sm:px-24 flex justify-center items-center font-bold text-7xl bg-white">
+        <div className="flex h-screen items-center justify-center bg-white px-6 sm:px-24">
           <SplitText
             text="The World's Ultimate Experience Marketplace for High-Performance Adventures"
-            className="font-clash uppercase leading-20"
+            className="font-manrope text-5xl font-semibold uppercase sm:text-6xl md:text-7xl md:leading-20 sm:leading-17 leading-14"
             delay={100}
             duration={1.5}
             ease="power3.out"
             splitType="words"
-
           />
         </div>
         <div className="px-6 py-30 sm:px-24">
-          <p>
-            <b>
-              Discover, Book, and Live the World’s Most Elite Adventures Step into CRE8 XP Portal, the global
-              marketplace where high-performance adventures come to life. Here, you can: Train with world-class athletes
-              in extreme sports and fitness
-            </b>
-          </p>
+          <FadeInText fromY={10}>
+            <p>
+              <b>
+                Discover, Book, and Live the World’s Most Elite Adventures Step into CRE8 XP Portal, the global
+                marketplace where high-performance adventures come to life. Here, you can: Train with world-class
+                athletes in extreme sports and fitness
+              </b>
+            </p>
+          </FadeInText>
           <div className="my-8 space-y-2 sm:w-2/3">
-            <p></p>
-            <p>
-              Join immersive adventure tours curated by elite organizers. Book exclusive experiences like workouts with
-              top performers, inspirational talks with rising athletes, or intimate sessions with musicians and
-              creators. Every experience is designed to push limits, ignite passion, and create memories that last a
-              lifetime — and you can explore, book, and manage it all seamlessly in one place.
-            </p>
-            <p>
-              Whether you want to feel the adrenaline, learn from the best, or unlock once-in-a-lifetime access, CRE8 XP
-              connects you with the world’s most extraordinary adventures.
-            </p>
+            <FadeInText fromY={10} delay={0.25}>
+              <p>
+                Join immersive adventure tours curated by elite organizers. Book exclusive experiences like workouts
+                with top performers, inspirational talks with rising athletes, or intimate sessions with musicians and
+                creators. Every experience is designed to push limits, ignite passion, and create memories that last a
+                lifetime — and you can explore, book, and manage it all seamlessly in one place.
+              </p>
+            </FadeInText>
+            <FadeInText fromY={10} delay={0.5}>
+              <p>
+                Whether you want to feel the adrenaline, learn from the best, or unlock once-in-a-lifetime access, CRE8
+                XP connects you with the world’s most extraordinary adventures.
+              </p>
+            </FadeInText>
           </div>
 
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">

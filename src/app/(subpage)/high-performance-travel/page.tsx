@@ -21,7 +21,7 @@ const HighPerformanceTravel = () => {
     console.log(latest);
   });
   return (
-    <section className="text-pri font-supreme">
+    <section className="text-pri font-manrope">
       <div className="bg-sec grid h-screen grid-cols-1 sm:grid-cols-2">
         <div className="my-auto px-10 sm:px-24">
           <SlideUpRevealText>

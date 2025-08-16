@@ -24,7 +24,7 @@ export default function Itineraries({ thumbnail, tag, title, href }: Itineraries
         </div>
 
         <div className="p-5">
-          <span className="group-hover:pri group-focus-visible:pri inline-flex items-center rounded-full bg-gray-200 px-2.5 py-1 text-xs font-medium text-gray-700 transition-colors duration-200 hover:bg-gray-100">
+          <span className="group-hover:text-sec group-focus-visible:pri inline-flex items-center rounded border border-gray-800 group-hover:border-gray-100 px-2.5 py-1 text-xs font-medium text-gray-700 transition-colors duration-200 hover:bg-gray-100 hover:text-pri">
             {tag}
           </span>
 
